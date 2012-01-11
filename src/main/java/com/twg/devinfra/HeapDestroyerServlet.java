@@ -6,6 +6,10 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 
+/*
+ * @author Nicolas Seara
+ */
+
 public class HeapDestroyerServlet extends HttpServlet {
 
     private ArrayList<Dummy> trashBin = new ArrayList<Dummy>();

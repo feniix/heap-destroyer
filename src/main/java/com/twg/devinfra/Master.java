@@ -1,5 +1,9 @@
 package com.twg.devinfra;
 
+/*
+ * @author Nicolas Seara
+ */
+
 public class Master {
 
     private String check = "1";

@@ -1,5 +1,7 @@
 package com.twg.devinfra;
-
+/*
+ * @author Nicolas Seara
+ */
 public class Dependency {
 
     private Master mas = new Master();

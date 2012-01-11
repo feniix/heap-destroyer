@@ -1,8 +1,11 @@
 package com.twg.devinfra;
 
+
 import java.util.ArrayList;
 import java.util.Collection;
-
+/*
+ * @author Nicolas Seara
+ */
 public class Dummy {
 
     private String name;
