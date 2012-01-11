@@ -10,8 +10,8 @@
         <encoding>UTF-8</encoding>
     </properties>
     <scm>
-        <connection>scm:git:git://git.warranty.local:admin-tools/heap-destroyer.git</connection>
-        <developerConnection>scm:git:git://git@git.warranty.local:admin-tools/heap-destroyer.git</developerConnection>
+        <connection>scm:git:git://git.warranty.local/admin-tools/heap-destroyer.git</connection>
+        <developerConnection>scm:git:git://git@git.warranty.local/admin-tools/heap-destroyer.git</developerConnection>
         <url>https://git.warranty.local/admin-tools/heap-destroyer</url>
     </scm>
     <distributionManagement>
