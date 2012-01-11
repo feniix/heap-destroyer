@@ -6,7 +6,7 @@
     <display-name>Archetype Created Web Application</display-name>
     <servlet>
         <servlet-name>HeapDestroyerServlet</servlet-name>
-        <servlet-class>com.twg.utilities.HeapDestroyerServlet</servlet-class>
+        <servlet-class>com.twg.devinfra.HeapDestroyerServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>HeapDestroyerServlet</servlet-name>

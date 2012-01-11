@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
 /*
  * @author Nicolas Seara
@@ -14,7 +16,8 @@ public class HeapDestroyerServlet extends HttpServlet {
 
     private ArrayList<Dummy> trashBin = new ArrayList<Dummy>();
     private static final long serialVersionUID = 1L;
-
+    private static Logger LOG = LoggerFactory.getLogger(HeapDestroyerServlet.class);
+    
     @Override
     public void init() throws ServletException {
         final long MEGABYTE = 1024L * 1024L;
@@ -22,7 +25,7 @@ public class HeapDestroyerServlet extends HttpServlet {
         // Any attempt will result in an OutOfMemoryException.
         long heapMaxSize = Runtime.getRuntime().maxMemory();
 
-        System.out.println("MAX HEAP SIZE IN MEGABYTES IS: " + heapMaxSize / MEGABYTE);
+        LOG.info("MAX HEAP SIZE IN MEGABYTES IS: {}", heapMaxSize / MEGABYTE);
 
         for (int i = 0; true; i++) {
             Dummy obj = new Dummy();
@@ -62,7 +65,7 @@ public class HeapDestroyerServlet extends HttpServlet {
             trashBin.add(obj2);
             trashBin.add(obj3);
 
-            System.out.println("FREE Heap Size in Megabytes: " + Runtime.getRuntime().freeMemory() / MEGABYTE);
+            LOG.info("FREE Heap Size in Megabytes: {}", Runtime.getRuntime().freeMemory() / MEGABYTE);
         }
     }
 
