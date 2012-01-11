@@ -7,15 +7,32 @@
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>heap-destroyer Maven Webapp</name>
-    <url>http://maven.apache.org</url>
     <properties>
         <encoding>UTF-8</encoding>
     </properties>
+    <scm>
+        <connection>scm:git:git://git.warranty.local:admin-tools/heap-destroyer.git</connection>
+        <developerConnection>scm:git:git://git@git.warranty.local:admin-tools/heap-destroyer.git</developerConnection>
+        <url>https://git.warranty.local/admin-tools/heap-destroyer</url>
+    </scm>
+    <distributionManagement>
+        <repository>
+            <id>nexus-repo</id>
+            <name>release repo</name>
+            <url>http://nexus.warranty.local/nexus/content/repositories/twg-maven2</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshot-repo</id>
+            <uniqueVersion>true</uniqueVersion>
+            <name>snapshot</name>
+            <url>http://nexus.warranty.local/nexus/content/repositories/maven2-snapshot-repo-twg</url>
+        </snapshotRepository>
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <version>4.10</version>
             <scope>test</scope>
         </dependency>
         <dependency>
